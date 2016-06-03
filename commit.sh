@@ -7,6 +7,7 @@ for dir in \
     .ssh/config \
     .tmux.conf \
     .zpreztorc \
+    .zprezto/modules/prompt/functions \
     z.sh \
     .zshrc 
 do
