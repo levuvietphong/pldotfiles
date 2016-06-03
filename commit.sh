@@ -3,11 +3,9 @@ export THISDIR=$(pwd)
 echo "Updating .pldotfiles ..."
 for dir in \
     .spacemacs.d \
-    .conf \
     .hammerspoon \
     .ssh/config \
     .tmux.conf \
-    .zprezto \
     .zpreztorc \
     .zshrc 
 do

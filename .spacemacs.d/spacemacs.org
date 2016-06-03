@@ -1,0 +1,184 @@
+* Spacemacs key bindings
+
+  SPC q q - quit
+  SPC w / - split window vertically
+  SPC w - split window horizontally
+  SPC 1 - switch to window 1
+  SPC 2 - switch to window 2
+  SPC w c - delete current window
+  SPC w h,j,k,l - move windows 4 ways
+  SPC TAB - switch to previous buffer
+  SPC b b - switch buffers and view recent files
+  SPC f f - find a file
+  SPC f s - save a file (:w also works)
+  SPC f S - save all opened buffers
+  SPC p p - open project
+  SPC p h - find a file in current project
+  SPC b d - kill current buffer
+  SPC b M - move buffer to another window
+  SPC b K - kill other buffers
+  SPC v - enter expand-region mode
+  SPC f e d - Open .spacemacs file
+  SPC c l - toggle comment of a region
+  
+** Misc
+fd or Ctrl g or ESCAPE - Escape
+Option q - fill a paragraph (cut it to 80 characters)
+SPC : Call a command in Emacs:
+ZQ - Quit without saving
+F5 - Run file
+** Helm
+C c C f - Turn on follow mode
+** Magic
+,c or ,, or C-c C-c - Finish commit
+
+* Vim key bindings
+
+** movement
+0 - beginning of line
+^ - beginning of non-whitespace
+$ - end of line
+9j - move down 9 lines
+w - move forward by word
+b - move backward by word
+xgg - go to line x
+gg - first line
+G - last line
+gi - switch to insert mode at last location
+C-u - up half page
+C-d - down half page
+f/ - move forward to first "/" character
+t/ - move forward right before the first "/" character
+; - repeat that command again
+H - head of the screen
+M - middle of the screen
+L - last of the screen
+  E - move forward by column
+  B - move backward by column
+} - move forward by paragraph or block
+{ - move backwards by paragraph or block
+ * - search for word under the cursor
+n - search again forward
+N - search again backwards
+p - search again backward
+# - search backwards for word under cursor
+ * - search forward for word under cursor
+/ - search forward
+? - search backward
+% - find matching brace, paren, etc
+% - find the match of char at cursor
+ma - mark a line in a file with marker "a"
+`a - after moving around, go back to the exact position of marker "a"
+'a - after moving around, go back to line of marker "a"
+:marks - view all the marks
+'' - go to the last place you were
+[{ - jump back to the "{" at the beginning of the current code block
+Ctrl u/d - page up/down
+
+** editing
+x - delete char under cursor
+X - delete char before cursor
+A - add to end of line
+I - insert at the beginning of the line
+dd - delete line
+D - delete from cursor to end of line
+d$ - delete to the end of line
+dw - delete word
+di' - delete text inside single quotes
+di( - delete text inside parenthese
+dtx - delete to character x
+yy - copy line
+Y - copy from cursor to end of line
+yw - yank current word
+cc - change line
+C - change from cursor to end of line
+cit - change text inside html tag
+ci' - change text inside single quotes
+ci{ - change text inside curly brackets.
+ci... - etc
+p - paste after cursor
+P - paste before cursor
+o - add line below
+O - add line above
+. - repeat last comment
+r - replace character
+R - replace. (overwrite) (good for columns of text)
+J - join line (cursor can be anywhere on line)
+u - undo
+i - insert
+o - new line (and ident)
+A - insert at the end of line
+Ctrl N - auto complete
+
+** folding
+zr - open fold
+zm - close fold
+
+** visual mode
+v - visual char mode
+V - visual line mode
+C-v - block visual mode
+v$ - select to end of line
+vG - select to end of file
+ggVG - select all the file
+
+** registers 
+"kyy - copy the current line into register k, you can type
+"Kyy - append to a register by using a capital letter
+"kp - paste register
+:reg - access all registers
+"* or "+ - the contents of the system clipboard
+"/ - last search command
+": - last command.
+
+** macro
+q a - record
+@ a - replay
+8 @a - replay 8 times 
+
+** case
+~ - change case from upper/lower
+
+** misc
+align-regexp - align by delimiters (http://irreal.org/blog/?p=169)
+
+* Misc
+** regexp
+http://www.emacswiki.org/emacs/RegularExpression
+http://ergoemacs.org/emacs/emacs_regex.html
+
+Matching Newline ＆ Tab
+When using interactive commands, emacs won't understand \n or \t.
+
+To enter a new line, press Ctrl+q Ctrl+j】
+To enter a Tab character, press 【Ctrl+q Tab ↹】
+(For explanation, see: Emacs's Key Syntax Explained).
+
+** solarized hack for bbatsov solarized
+
+edit =elpa/solarized.el=
+
+#+begin_lang elisp
+;;; Setup Start
+(defmacro solarized-with-color-variables (variant &rest body)
+  (declare (indent 0))
+  `(let* ((class '((class color) (min-colors 89)))
+         (variant ,variant)
+         (s-base03    "#1c1c1c")
+         (s-base02    "#262626")
+         ;; emphasized content
+         (s-base01    "#585858")
+         ;; primary content
+         (s-base00    "#626262")
+         (s-base0     "#808080")
+         ;; comments
+         (s-base1     "#8a8a8a")
+         ;; background highlight light
+         (s-base2     "#e4e4e4")
+         ;; background light
+         (s-base3     "#ffffd7")
+#+end_lang
+
+Note: use xterm/hex instaed of solarized hex
+http://ethanschoonover.com/solarized
+
