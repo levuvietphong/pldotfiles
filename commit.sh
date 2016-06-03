@@ -7,6 +7,7 @@ for dir in \
     .ssh/config \
     .tmux.conf \
     .zpreztorc \
+    z.sh \
     .zshrc 
 do
     if [ -d $HOME/$dir ]
