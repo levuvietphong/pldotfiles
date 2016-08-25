@@ -3,6 +3,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/
 export PATH=/Users/phong/miniconda2/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH=/usr/local/Cellar/netcdf:$PATH
+
 source ~/.zprezto/init.zsh
 
 export EDITOR='vim'

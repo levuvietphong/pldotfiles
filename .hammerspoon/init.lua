@@ -1,7 +1,7 @@
 require "hs.wifi"
 
 -- Set grid size.
-hs.grid.GRIDWIDTH  = 2
+hs.grid.GRIDWIDTH  = 3
 hs.grid.GRIDHEIGHT = 2
 hs.grid.MARGINX    = 0
 hs.grid.MARGINY    = 0
