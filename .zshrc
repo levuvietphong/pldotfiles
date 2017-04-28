@@ -26,20 +26,9 @@ alias rm="rm -f"
 #     kill -9 $PID
 # }
 
-# export EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
-# alias e='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
-# #alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-site-file --no-splash"
-# alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-site-file --no-splash"
-# alias ed='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
-# alias ked=kill_emacs_daemon
-
-# # start emacsd
-# if pgrep Emacs > /dev/null 2>&1
-# then
-#     echo "emacs is running" > /dev/null 2>&1
-# else
-#     $(/Applications/Emacs.app/Contents/MacOS/Emacs --daemon 2>/dev/null)
-# fi
+alias e='emacsclient -t'
+alias emacsd='emacs --daemon'
+alias ked='killall Emacs'
 
 # autossh
 autossh -M 0 -f -T -N roger
