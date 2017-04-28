@@ -2,6 +2,7 @@ export THISDIR=$(pwd)
 
 echo "Updating .pldotfiles ..."
 for dir in \
+    .spacemacs \
     .spacemacs.d \
     .hammerspoon \
     .ssh/config \
